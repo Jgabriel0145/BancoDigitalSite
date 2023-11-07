@@ -4,11 +4,9 @@ namespace App\DataService;
 
 abstract class DataService
 {
-    private $api_url = 'http://localhost:8000';
-
-    public function EnviarDados($url, $dados)
+    public function EnviarDados($api_url, $dados)
     {
-        $curl = curl_init($url);
+        $curl = curl_init($api_url);
 
         curl_setopt($curl, CURLOPT_POST, 1);
         curl_setopt($curl, CURLOPT_POSTFIELDS, http_build_query($dados));
