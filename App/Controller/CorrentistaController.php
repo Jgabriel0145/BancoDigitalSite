@@ -15,8 +15,7 @@ class CorrentistaController extends Controller
         $model->email = $_POST['email'];
         $model->data_nasc = $_POST['data_nasc'];
         $model->senha = $_POST['senha'];
-        $tempo = new \DateTime();
-        $model->data_cadastro = $tempo->format('Y-m-d H:i:s');
+        $model->data_cadastro = (new \DateTime())->format('Y-m-d H:i:s');
 
         $model->Save();
 
