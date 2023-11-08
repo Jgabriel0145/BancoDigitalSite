@@ -12,5 +12,9 @@
 
         <button type="submit">Login</button>
     </form>
+
+    <br><br>
+
+    <button onclick="document.location='/correntista/cadastro'">Cadastre-se</button>
 </body>
 </html>

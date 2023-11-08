@@ -2,11 +2,30 @@
 
 namespace App\Controller;
 
+use App\Model\CorrentistaModel;
+
 class CorrentistaController extends Controller
 {
     public static function Save()
     {
+        $model = new CorrentistaModel();
 
+        $model->nome = $_POST['nome'];
+        $model->cpf = $_POST['cpf'];
+        $model->email = $_POST['email'];
+        $model->data_nasc = $_POST['data_nasc'];
+        $model->senha = $_POST['senha'];
+        $tempo = new \DateTime();
+        $model->data_cadastro = $tempo->format('Y-m-d H:i:s');
+
+        $model->Save();
+
+        header('Location: /login');
+    }
+
+    public static function Index()
+    {
+        parent::render('Correntista/CorrentistaCadastro');
     }
 
     public static function List()
@@ -21,6 +40,6 @@ class CorrentistaController extends Controller
 
     public static function Auth()
     {
-
+        
     }
 }

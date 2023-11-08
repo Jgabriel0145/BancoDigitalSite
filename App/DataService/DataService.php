@@ -2,24 +2,34 @@
 
 namespace App\DataService;
 
+use Exception;
+
 abstract class DataService
 {
+    private $localhost = 'http://localhost:8000';
+
     public function EnviarDados($api_url, $dados)
     {
-        $curl = curl_init($api_url);
+        try
+        {
+            $post_json = json_encode($dados);
+            $url = $this->localhost . $api_url;
+            $curl = curl_init($url);
 
-        curl_setopt($curl, CURLOPT_POST, 1);
-        curl_setopt($curl, CURLOPT_POSTFIELDS, http_build_query($dados));
-        curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+            curl_setopt($curl, CURLOPT_POST, 1);
+            curl_setopt($curl, CURLOPT_POSTFIELDS, $post_json);
+            curl_setopt($curl, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
+            curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 
-        $response = curl_exec($curl);
-
-        if (curl_errno($curl)) {
-            echo 'Erro na solicitação cURL: ' . curl_error($curl);
-        } else {
-            echo 'Resposta da API: ' . $response;
+            $response = curl_exec($curl);
+        
+            curl_close($curl);
+        
+            return $response;
         }
-
-        curl_close($curl);
+        catch (Exception $ex)
+        {
+            throw new Exception('Erro: ' . $ex);
+        }
     }  
 }

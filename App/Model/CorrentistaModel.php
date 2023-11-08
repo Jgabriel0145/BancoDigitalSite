@@ -5,7 +5,7 @@ use App\DataService\DataServiceCorrentista;
 
 class CorrentistaModel extends Model
 {
-    public $nome, $cpf, $data_nasc, $email, $senha;
+    public $id, $nome, $cpf, $data_nasc, $email, $senha, $data_cadastro;
 
     public function Save()
     {

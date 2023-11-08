@@ -7,6 +7,6 @@ class DataServiceCorrentista extends DataService
 {
     public function Insert(CorrentistaModel $model)
     {
-        //parent::EnviarDados();
+        return $model = parent::EnviarDados('/correntista/save', $model);
     }
 }
