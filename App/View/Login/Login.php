@@ -7,8 +7,8 @@
 </head>
 <body>
     <form action="/login/auth" method="post">
-        <input type="number" name="cpf_login" placeholder="CPF">
-        <input type="password" name="senha_login" placeholder="Senha">
+        <input type="number" name="cpf" placeholder="CPF">
+        <input type="password" name="senha" placeholder="Senha">
 
         <button type="submit">Login</button>
     </form>

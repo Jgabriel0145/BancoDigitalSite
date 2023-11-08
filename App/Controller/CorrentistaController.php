@@ -39,6 +39,11 @@ class CorrentistaController extends Controller
 
     public static function Auth()
     {
-        
+        $model = new CorrentistaModel();
+
+        $model->cpf = $_POST['cpf'];
+        $model->senha = $_POST['senha'];
+
+        $model->Auth();
     }
 }

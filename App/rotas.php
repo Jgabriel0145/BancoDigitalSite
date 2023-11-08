@@ -58,6 +58,10 @@ switch ($url)
     case '/login':
         CorrentistaController::Login();
         break;
+
+    case '/login/auth':
+        CorrentistaController::Auth();
+        break;
         
     default:
         header('Location: /login');

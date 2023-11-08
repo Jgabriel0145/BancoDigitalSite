@@ -9,4 +9,9 @@ class DataServiceCorrentista extends DataService
     {
         return $model = parent::EnviarDados('/correntista/save', $model);
     }
+
+    public function Auth(CorrentistaModel $model)
+    {
+        return $model = parent::EnviarDados('/correntista/login', $model);
+    }
 }
