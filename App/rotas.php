@@ -62,8 +62,12 @@ switch ($url)
     case '/login/auth':
         CorrentistaController::Auth();
         break;
+
+    case '/propaganda':
+        include VIEWS . 'PaginaInicialPropaganda.php';
+        break;
         
     default:
-        header('Location: /login');
+        header('Location: /propaganda');
         break;
 }
