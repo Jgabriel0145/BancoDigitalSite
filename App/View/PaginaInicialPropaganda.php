@@ -11,13 +11,20 @@
         <img src="/View/Assets/Img/Geral/logo.png" alt="">
 
         <div class="navbar-botoes">
-            <button>Cadastre-se</button>
-            <button>Login</button>
+            <button onclick="document.location='/correntista/cadastro'">Cadastre-se</button>
+            <button onclick="document.location='/login'">Login</button>
         </div>
     </div>
 
-    <div class="container">
+    <div id="divisor"></div>
 
+    <div class="container">
+        <div class="container-texto">
+            <span id="txt-principal">
+                Muito mais que banco<br>
+                Faça seu cadastro
+            </span>
+        </div>
     </div>
 
     <div class="footer">

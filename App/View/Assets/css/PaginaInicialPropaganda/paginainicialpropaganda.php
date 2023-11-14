@@ -7,47 +7,21 @@
         font-family: Arial, Helvetica, sans-serif;
     }
 
+    html
+    {
+        width: 100%;
+        height: 100%;
+        min-width: 800px;
+    }
+
     body
     {
         background-color: #FFFFFF;
-        min-width: 500px;   
+        width: 100%;
+        height: 100%;
+        min-width: 800px;
+        overflow-y: hidden;
     }
-    /*
-    .navbar
-    {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        width: 98%;
-        padding: 1%;
-        background-color: #FC7C04;
-        min-width: 500px;
-    }
-
-    .navbar img
-    {
-        width: 8%;
-        min-width: 100px;
-    }
-
-    .navbar-botoes
-    {
-        display: flex;
-        flex-direction: row;
-    }
-
-    .navbar-botoes button
-    {
-        width: 125px;
-        padding: 1%;
-        margin: 1%;
-        font-size: 1.1em;
-        border-radius: 5px;
-        background-color: rgba(0, 0, 0, 0);
-        font-weight: bold;
-        color: #FFFFFF;
-        text-decoration: underline;
-    }*/
 
     .navbar
     {
@@ -86,6 +60,48 @@
     .navbar-botoes button:hover
     {
         cursor: pointer;
+        color: #D0D0D0;
+    }
+    
+    #divisor
+    {
+        width: 100%;
+        height: 1px;
+        background-color: #FFFFFF;
+    }
+
+    .container
+    {
+        width: 100%;
+        display: grid;
+        grid-template-areas: 
+        "esq1 centro1 dir1"
+        "esq2 centro2 dir2"
+        "esq3 centro3 dir3";
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        height: 91.8%;
+        background-image: url('/View/Assets/Img/PagInicialPropaganda/celular.png');
+        background-size: cover;
+    }
+
+    .container .container-texto
+    {
+        width: 100%;
+        grid-column: dir1;
+        grid-row: dir1 / dir3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(252, 124, 4, 1);
+        height: 100%;
+    }
+
+    .container .container-texto #txt-principal
+    {
+        color: #FFFFFF;
+        text-align: center;
+        font-size: 4em;
     }
 
 </style>
