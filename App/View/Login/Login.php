@@ -40,7 +40,7 @@
                         </div>
 
                         <div class="pt-1 mb-4">
-                            <button class="btn btn-lg btn-block" type="submit" style="background-color: #FC7C04; color: #FFFFFF;">Login</button>
+                            <button class="btn btn-lg btn-block" type="submit" style="background-color: #FC7C04; color: #FFFFFF;">Entrar</button>
                         </div>
 
                         <p class="mb-5 pb-lg-2" style="color: #393f81;">Não possui conta? <a href="/correntista/cadastro"
