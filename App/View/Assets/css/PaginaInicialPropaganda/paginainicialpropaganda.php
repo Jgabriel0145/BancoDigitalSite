@@ -20,7 +20,6 @@
         width: 100%;
         height: 100%;
         min-width: 800px;
-        overflow-y: hidden;
     }
 
     .navbar
@@ -60,10 +59,9 @@
     .navbar-botoes button:hover
     {
         cursor: pointer;
-        color: #D0D0D0;
     }
     
-    #divisor
+    .divisor
     {
         width: 100%;
         height: 1px;
@@ -81,6 +79,7 @@
         grid-template-rows: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr;
         height: 91.8%;
+        min-width: 800px;
         background-image: url('/View/Assets/Img/PagInicialPropaganda/celular.png');
         background-size: cover;
     }
@@ -101,7 +100,41 @@
     {
         color: #FFFFFF;
         text-align: center;
-        font-size: 4em;
+        font-size: 2em;
     }
 
+    .container .container-texto #txt-principal h2
+    {
+        text-decoration: underline;
+    }
+
+    .container2 {
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: 1fr 1fr 1fr;
+        height: auto;
+        background-color: #FC7C04;
+        padding: 20px;
+        min-width: 800px;
+    }
+
+    .container2 p {
+        font-size: 1.5em;
+        line-height: 1.6;
+        margin-bottom: 20px;
+        color: #FFFFFF;
+        border: 1px solid #FFFFFF;
+        padding: 10px;
+        text-align: center;
+        margin: 5px;
+        border-radius: 10px;
+    }
+
+    footer 
+    {
+        background-color: #333333;
+        color: #FFFFFF;
+        padding: 10px;
+        text-align: center;
+    }
 </style>
