@@ -122,12 +122,13 @@
         font-size: 1.5em;
         line-height: 1.6;
         margin-bottom: 20px;
-        color: #FFFFFF;
+        color: #000000;
         border: 1px solid #FFFFFF;
         padding: 10px;
         text-align: center;
         margin: 5px;
         border-radius: 10px;
+        background-color: #FFFFFF;
     }
 
     footer 
