@@ -51,6 +51,10 @@ switch ($url)
         ChavePixController::ExcluirChavePix();
         break;*/
 
+    case '/inicio':
+        include VIEWS . 'Inicio.php';
+        break;
+
     case '/login':
         CorrentistaController::Login();
         break;
