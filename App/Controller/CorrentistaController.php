@@ -10,11 +10,11 @@ class CorrentistaController extends Controller
     {
         $model = new CorrentistaModel();
 
-        $model->nome = $_POST['nome'];
-        $model->cpf = $_POST['cpf'];
-        $model->email = $_POST['email'];
-        $model->data_nasc = $_POST['data_nasc'];
-        $model->senha = $_POST['senha'];
+        $model->nome = $_POST['nome_cadastro'];
+        $model->cpf = $_POST['cpf_cadastro'];
+        $model->email = $_POST['email_cadastro'];
+        $model->data_nasc = $_POST['data_nasc_cadastro'];
+        $model->senha = $_POST['senha_cadastro'];
         $model->data_cadastro = (new \DateTime())->format('Y-m-d H:i:s');
 
         $model->Save();

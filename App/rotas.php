@@ -11,10 +11,6 @@ switch ($url)
         CorrentistaController::Save();
         break;
 
-    case '/correntista/cadastro':
-        CorrentistaController::Index();
-        break;
-
     /*case '/correntista':
         CorrentistaController::List();
         break;
