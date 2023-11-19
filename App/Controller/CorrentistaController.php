@@ -44,6 +44,30 @@ class CorrentistaController extends Controller
         $model->cpf = $_POST['cpf'];
         $model->senha = $_POST['senha'];
 
-        $model->Auth();
+        $usuario = $model->Auth();
+
+        if ($usuario->id != null)
+        {
+            $dados = ['id' => $usuario->id, 'nome' => $usuario->nome, 'cpf' => $usuario->cpf, 
+            'data_nasc' => $usuario->data_nasc, 'email' => $usuario->email, 'senha' => $usuario->senha, 
+            'data_cadastro' => $usuario->data_cadastro];
+
+            $_SESSION['dados_usuario'] = $dados;
+
+            header('Location: /inicio');
+        }
+        else header('Location: /login?erro=true');
+    }
+
+    public static function Logout()
+    {
+        unset($_SESSION['dados_usuario']);
+        header('Location: /login');
+    }
+
+    public static function PagInicio()
+    {
+        parent::IsAuthenticated();
+        parent::render('Inicio');
     }
 }

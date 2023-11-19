@@ -6,6 +6,8 @@
     <title>Área do Correntista</title>
 </head>
 <body>
+
+    <h1>Bem-vindo <?= $_SESSION['dados_usuario']['nome'] ?></h1>
     
 </body>
 </html>

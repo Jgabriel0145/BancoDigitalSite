@@ -14,6 +14,6 @@ class CorrentistaModel extends Model
 
     public function Auth()
     {
-        (new DataServiceCorrentista())->Auth($this);
+        return $dados = (new DataServiceCorrentista())->Auth($this);
     }
 }

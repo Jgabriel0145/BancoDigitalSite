@@ -52,7 +52,7 @@ switch ($url)
         break;*/
 
     case '/inicio':
-        include VIEWS . 'Inicio.php';
+        CorrentistaController::PagInicio();
         break;
 
     case '/login':
@@ -61,6 +61,10 @@ switch ($url)
 
     case '/login/auth':
         CorrentistaController::Auth();
+        break;
+
+    case 'login/logout':
+        CorrentistaController::Logout();
         break;
 
     case '/propaganda':

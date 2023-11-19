@@ -30,7 +30,7 @@
                         </div>
 
                         <div class="form-outline mb-4">
-                            <input type="text" id="form2Example17" class="form-control form-control-lg" name="cpf" maxlength="14"/>
+                            <input type="text" id="form2Example17" class="form-control form-control-lg" name="cpf" minlength="11" maxlength="11"/>
                             <label class="form-label" for="form2Example17">CPF</label>
                         </div>
 
