@@ -35,7 +35,7 @@
                         </div>
 
                         <div class="form-outline mb-4">
-                            <input type="password" id="form2Example27" class="form-control form-control-lg" name="senha"/>
+                            <input type="password" id="form2Example27" class="form-control form-control-lg" name="senha" minlength="8"/>
                             <label class="form-label" for="form2Example27">Senha</label>
                         </div>
 
@@ -80,7 +80,7 @@
                         </div>
 
                         <div class="form-outline mb-4">
-                            <input type="text" id="form2Example17" class="form-control form-control-lg" name="email_cadastro"/>
+                            <input type="email" id="form2Example17" class="form-control form-control-lg" name="email_cadastro"/>
                             <label class="form-label label-formulario" for="form2Example17">Email</label>
                         </div>
 

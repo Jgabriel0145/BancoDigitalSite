@@ -12,8 +12,7 @@
         <img src="/View/Assets/Img/Geral/logo.png" alt="">
 
         <div class="navbar-botoes">
-            <button onclick="document.location='/correntista/cadastro'">Cadastre-se</button>
-            <button onclick="document.location='/login'">Login</button>
+            <button onclick="document.location='/login'">Cadastre-se /<br> Entrar</button>
         </div>
     </div>
 
