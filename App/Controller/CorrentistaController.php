@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Model\ContaModel;
 use App\Model\CorrentistaModel;
 
 class CorrentistaController extends Controller
@@ -20,16 +21,6 @@ class CorrentistaController extends Controller
         $model->Save();
 
         header('Location: /login');
-    }
-
-    public static function Index()
-    {
-        parent::render('Correntista/CorrentistaCadastro');
-    }
-
-    public static function List()
-    {
-
     }
 
     public static function Login()
@@ -68,6 +59,19 @@ class CorrentistaController extends Controller
     public static function PagInicio()
     {
         parent::IsAuthenticated();
-        parent::render('Inicio');
+
+        $model = new ContaModel();
+        $model->rows_contas = $model->ListContas($_SESSION['dados_usuario']);
+
+        foreach ($model->rows_contas as $conta)
+        {
+            if ($conta->tipo == 'C')
+                $_SESSION['conta_corrente'] = $conta;
+            
+            else if ($conta->tipo == 'P')
+                $_SESSION['conta_poupanca'] = $conta;
+        }
+        
+        parent::render('Inicio', $model);
     }
 }

@@ -15,7 +15,6 @@
 <body id="body-pd">
     <header class="header" id="header">
         <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i> &nbsp Área do correntista</div>
-        <!--<div class="header_img"> <img src="https://i.imgur.com/hczKIze.jpg" alt=""> </div>-->
     </header>
     <div class="l-navbar" id="nav-bar">
         <nav class="nav">
@@ -28,13 +27,14 @@
                 <div class="nav_list"> 
                     <a href="#" class="nav_link active"> 
                         <i class='bx bx-grid-alt nav_icon'></i> 
-                        <span class="nav_name">Pix</span> 
+                        <span class="nav_name">Área do correntista</span> 
                     </a> 
                     <!--
                     <a href="#" class="nav_link"> 
                         <i class='bx bx-user nav_icon'></i> 
                         <span class="nav_name">Users</span> 
                     </a> 
+
                     <a href="#" class="nav_link">     
                         <i class='bx bx-message-square-detail nav_icon'></i> 
                         <span class="nav_name">Messages</span> 
@@ -66,6 +66,34 @@
     <!--Container Main start-->
     <div class="height-100 container-main">
         <h1>Bem-vindo <?= $_SESSION['dados_usuario']['nome'] ?></h1>
+
+        <div class="table-responsive">
+            <table class="table table-fixed">
+                <thead>
+                    <tr>
+                        <th scope="col" class="col-3">Número da Conta</th>
+                        <th scope="col" class="col-3">Tipo</th>
+                        <th scope="col" class="col-3">Saldo</th>
+                        <th scope="col" class="col-3">Limite</th>
+                    </tr>
+                </thead>
+                
+                <tbody>
+                    <?php foreach($model->rows_contas as $conta): ?>
+                        <tr>
+                            <th scope="row" class="col-3"><?= $conta->id ?></th>
+                            <?php if ($conta->tipo == 'C'): ?>
+                                <td class="col-3">Corrente</td>
+                            <?php else: ?>
+                                <td class="col-3">Poupança</td>
+                            <?php endif; ?>
+                            <td class="col-3"><?= $conta->saldo ?></td>
+                            <td class="col-3"><?= $conta->limite ?></td>
+                        </tr>
+                    <?php endforeach ?>
+                </tbody>
+            </table>
+        </div>
     </div>
     <!--Container Main end-->
 
